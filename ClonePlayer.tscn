@@ -95,8 +95,3 @@ anims/Run = SubResource( 4 )
 position = Vector2( 0, -0.5 )
 scale = Vector2( 0.7, 0.65 )
 shape = SubResource( 5 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 0.4, 0.4 )
-smoothing_enabled = true

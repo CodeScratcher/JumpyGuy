@@ -38,4 +38,4 @@ speed = 10.0
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1280, -16 )
-path = "res://Hub.tscn"
+path = "res://Moving3.tscn"

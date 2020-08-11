@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://PixelFJVerdana12pt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ButtonChangeScene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+resource_name = "title"
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_name = "title"
+font_data = ExtResource( 1 )
+
+[node name="BeatHubSegment" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 368.0
+margin_top = 64.0
+margin_right = 760.0
+margin_bottom = 192.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Nice Job! You can continue on or go back to the hub"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 424.0
+margin_top = 184.0
+margin_right = 656.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 2 )
+text = "Continue"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Final1.tscn"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 424.0
+margin_top = 296.0
+margin_right = 656.0
+margin_bottom = 368.0
+custom_fonts/font = SubResource( 2 )
+text = "Back To Hub"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://Hub.tscn"

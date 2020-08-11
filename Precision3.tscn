@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=4]
+
+[node name="Precision3" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 524331, 1, 0, 524332, 1, 0, 524333, 1, 0, 589864, 1, 0, 589865, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655393, 1, 0, 655394, 1, 0, 655395, 1, 0, 655397, 1, 0, 655398, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 872, 304 )
+
+[node name="Spikes" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1104, 304 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1216, 304 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1312, 272 )
+
+[node name="Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1432, 240 )
+path = "res://Precision4.tscn"
