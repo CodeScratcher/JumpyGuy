@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PixelFJVerdana12pt.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+resource_name = "title"
+size = 12
+font_data = ExtResource( 4 )
+
+[node name="Hub" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 88.0, 72.0 ]
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 304 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 536870913, 0, 65539, 536870913, 0, 65540, 536870913, 0, 65541, 536870913, 0, 65542, 536870913, 0, 65543, 536870913, 0, 65544, 536870913, 0, 65545, 536870913, 0, 65546, 536870913, 0, 65547, 536870913, 0, 65548, 536870913, 0, 65549, 536870913, 0, 65550, 536870913, 0, 65551, 536870913, 0, 65552, 536870913, 0, 65553, 536870913, 0, 131074, 2, 0, 131089, 536870914, 0, 196610, 2, 0, 196625, 2, 0, 262146, 2, 0, 262147, 536870913, 0, 262148, 536870913, 0, 262149, 536870913, 0, 262150, 536870913, 0, 262151, 536870913, 0, 262152, 536870913, 0, 262153, 536870913, 0, 262161, 2, 0, 327682, 2, 0, 327692, 536870913, 0, 327697, 2, 0, 393218, 2, 0, 393227, 536870913, 0, 393228, 536870914, 0, 393229, 536870913, 0, 393230, 536870913, 0, 393233, 2, 0, 458754, 2, 0, 458762, 536870913, 0, 458763, 536870914, 0, 458764, 536870914, 0, 458765, 536870914, 0, 458766, 536870914, 0, 458767, 536870913, 0, 458768, 536870913, 0, 458769, 2, 0, 524290, 2, 0, 524295, 536870913, 0, 524305, 2, 0, 589826, 2, 0, 589830, 536870913, 0, 589831, 536870914, 0, 589832, 536870913, 0, 589841, 2, 0, 655362, 536870914, 0, 655363, 536870913, 0, 655364, 536870913, 0, 655365, 536870913, 0, 655366, 536870914, 0, 655367, 536870914, 0, 655368, 536870914, 0, 655369, 536870913, 0, 655370, 536870913, 0, 655371, 536870913, 0, 655372, 536870913, 0, 655373, 536870913, 0, 655374, 536870913, 0, 655375, 536870913, 0, 655376, 536870913, 0, 655377, 2, 0 )
+
+[node name="Moving" parent="." instance=ExtResource( 3 )]
+position = Vector2( 112, 303 )
+path = "res://Moving1.tscn"
+
+[node name="MovingLable" type="RichTextLabel" parent="."]
+margin_left = 104.0
+margin_top = 200.0
+margin_right = 224.0
+margin_bottom = 280.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Moving
+Mayhem"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://PixelFJVerdana12pt.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ButtonChangeScene.gd" type="Script" id=3]
+[ext_resource path="res://ExitButton.gd" type="Script" id=4]
+[ext_resource path="res://Continue.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+resource_name = "title"
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 208.0
+margin_right = 832.0
+margin_bottom = 160.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "JumpyGuy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 304.0
+margin_right = 760.0
+margin_bottom = 408.0
+custom_fonts/font = SubResource( 1 )
+text = "New Game"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 160.0
+margin_right = 760.0
+margin_bottom = 264.0
+custom_fonts/font = SubResource( 1 )
+text = "Continue"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 456.0
+margin_right = 760.0
+margin_bottom = 560.0
+custom_fonts/font = SubResource( 1 )
+text = "Exit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

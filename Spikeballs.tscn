@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://spikeyGuy.png" type="Texture" id=1]
+[ext_resource path="res://spike.gd" type="Script" id=2]
+[ext_resource path="res://Spikeballs.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.66667, 2.66667 )
+
+[node name="Spikes" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="SpikeBody" type="Area2D" parent="."]
+position = Vector2( 5.68434e-14, 5.68434e-14 )
+scale = Vector2( 3, 3 )
+
+[node name="spikeball" type="Sprite" parent="SpikeBody"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeBody"]
+position = Vector2( -2.66667, 2.66667 )
+shape = SubResource( 1 )
+
+[node name="MoveTween" type="Tween" parent="."]
+repeat = true
+playback_process_mode = 0
+playback/repeat = true
+[connection signal="body_entered" from="SpikeBody" to="SpikeBody/spikeball" method="spike_body_enter"]

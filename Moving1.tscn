@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Moving.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Spikeballs.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=6]
+
+[node name="Moving1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -120, 112 )
+
+[node name="Spikes" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400, 120 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131088, 1, 0, 131089, 1, 0, 131092, 1, 0, 131093, 1, 0, 131095, 1, 0, 131096, 1, 0, 196624, 2, 0, 196625, 2, 0, 196628, 2, 0, 196629, 2, 0, 196631, 2, 0, 196632, 2, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262160, 2, 0, 262161, 2, 0, 262164, 2, 0, 262165, 2, 0, 262167, 2, 0, 262168, 2, 0, 393212, 2, 0, 393213, 2, 0, 393214, 2, 0, 393215, 2, 0, 327680, 2, 0, 327681, 2, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327696, 2, 0, 327697, 2, 0, 327700, 2, 0, 327701, 2, 0, 327703, 2, 0, 327704, 2, 0 )
+
+[node name="Moving" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 144 )
+move_to = Vector2( 128, 0 )
+
+[node name="Moving2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 144 )
+move_to = Vector2( 0, -128 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 728, 112 )
+move_to = Vector2( 0, -128 )
+speed = 12.8
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 768, 48 )
+path = "res://Moving2.tscn"

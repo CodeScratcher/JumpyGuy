@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="YouWin" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 72.0
+margin_bottom = 40.0
+bbcode_text = "You Win!"
+text = "You Win!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
